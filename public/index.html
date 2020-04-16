@@ -8,14 +8,28 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header></header>
+        <header>
+            <h1>Mood Forecast</h1>
+        </header>
         <main>
-            <section class="input-location"></section>
-            <section class="input-mood"></section>
-            <section class="display"></section>
+            <section class="input-location">
+                <label for="zip">Where are you?</label>
+                <input id="zip" type="text" placeholder="enter zip code here">
+            </section>
+            <section class="input-mood">
+                <label for="feelings">What's your mood today?</label>
+                <textarea id="feelings" placeholder="enter your feelings here" rows="5" cols="30"></textarea>
+            </section>
+            <button id="generate" type="submit">Generate</button>
         </main>
+        <section class="display">
+            <div id="entryHolder">
+                <div id="date"  class="uiData"></div>
+                <div id="temp"  class="uiData"></div>
+                <div id="content"  class="uiData"></div>
+            </div>
+        </section>
         <footer></footer>
-    </div>
+
 </body>
 </html>

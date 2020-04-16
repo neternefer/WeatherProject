@@ -1,3 +1,65 @@
 @import "./normalize.css";
 @import "./reset.local.css";
 
+header {
+    padding: 1rem 1rem 0 1rem;
+    font-size: 1.5rem;
+}
+main {
+    padding: 0 1rem 1rem 1rem;
+    width: 95vw;
+}
+
+section {
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+}
+
+input {
+    border-radius: 3%;
+    border: 1px solid #b3b3b3;
+    padding: 1rem;
+}
+
+textarea {
+    border-radius: 3%;
+    border: 1px solid #b3b3b3;
+    padding: 1rem;
+}
+
+button {
+    border-radius: 3%;
+    background-color: #b3b3b3;
+    font-size: 1.5rem;
+    padding: .5rem;
+    width: 250px;
+    margin: 2rem auto;
+}
+/*
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: .5s;
+    height: 100vh;
+    background-color: #fff;
+    color: #000;
+} */
+
+.visible {
+    transform: translateX(100vw);
+    width: 100vw;
+    height: 100vh;
+}
