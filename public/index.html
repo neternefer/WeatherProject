@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Weather Mood</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <script src="app.js"></script>
 </head>
 <body>
+    <div class="grid">
         <header>
             <h1>Mood Forecast</h1>
         </header>
         <main>
             <section class="input-location">
-                <label for="zip">Where are you?</label>
+                <label for="zip">Where <span>are</span> you?</label>
                 <input id="zip" type="text" placeholder="enter zip code here">
             </section>
             <section class="input-mood">
-                <label for="feelings">What's your mood today?</label>
+                <label for="feelings">What's your <span>mood</span> today?</label>
                 <textarea id="feelings" placeholder="enter your feelings here" rows="5" cols="30"></textarea>
             </section>
             <button id="generate" type="submit">Generate</button>
         </main>
+        <!--Side panel with results-->
         <section class="display">
+            <div class="close"></div>
             <div id="entryHolder">
-                <div id="date"  class="uiData"></div>
-                <div id="temp"  class="uiData"></div>
-                <div id="content"  class="uiData"></div>
+                <div id="date" class="uiData"></div>
+                <div id="temp" class="uiData"></div>
+                <div id="content" class="uiData"></div>
             </div>
         </section>
-        <footer></footer>
-
+        <footer>
+            &copy;2020
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,51 +1,92 @@
 @import "./normalize.css";
 @import "./reset.local.css";
 
-header {
-    padding: 1rem 1rem 0 1rem;
-    font-size: 1.5rem;
+html {
+    height: 100vh;
 }
+
+body {
+    font-family: 'Courgette', 'Calibri', 'Arial', sans-serif;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 5vw 1fr 5vw;
+    grid-template-rows: 10vh 1fr 8vh;
+    grid-template-areas:
+        '. h .'
+        '. m .'
+        '. f .';
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    grid-area: h;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
 main {
-    padding: 0 1rem 1rem 1rem;
-    width: 95vw;
+    grid-area: m;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+footer {
+    grid-area: f;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 section {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+span {
+    color: #c4886c
 }
 
 label {
     display: block;
     font-size: 2.5rem;
-    padding: 2rem 1rem;
+    padding-bottom: .5rem;
 }
 
 input {
-    border-radius: 3%;
-    border: 1px solid #b3b3b3;
-    padding: 1rem;
+    border-radius: 4%;
+    border: 1px solid #c4886c;
+    padding: .5rem;
 }
 
 textarea {
-    border-radius: 3%;
-    border: 1px solid #b3b3b3;
-    padding: 1rem;
+    border-radius: 4%;
+    border: 1px solid #c4886c;
+    padding: .5rem;
 }
 
 button {
-    border-radius: 3%;
-    background-color: #b3b3b3;
+    border-radius: 4%;
+    background-color: #c4886c;
     font-size: 1.5rem;
     padding: .5rem;
-    width: 250px;
-    margin: 2rem auto;
+    width: 70vw;
+    height: 3rem;
+    margin: 0 auto;
+    color: #fff;
 }
-/*
+
 .display {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     width: 0;
     position: fixed;
     z-index: 3;
@@ -54,12 +95,173 @@ button {
     overflow-x: hidden;
     transition: .5s;
     height: 100vh;
-    background-color: #fff;
-    color: #000;
-} */
-
-.visible {
-    transform: translateX(100vw);
-    width: 100vw;
-    height: 100vh;
+    background-image: url('./canyon_by_mark-boss.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: start;
 }
+
+#entryHolder {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    margin: 15vh 10vw;
+}
+
+.display span {
+    color: #f2ded5;
+}
+
+.display #date span {
+    color: #000;
+}
+
+div#date {
+    font-size: 1.7rem;
+    color:#fff;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+#temp {
+    font-size: 4rem;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+}
+
+#content {
+    font-size: 2.5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+}
+
+.close::before,
+.close::after {
+    position: absolute;
+    content: " ";
+    width: 2px;
+    height: 2rem;
+    left: 1rem;
+    background-color: #fff;
+}
+
+.close::before {
+    transform: rotate(45deg);
+}
+
+.close::after {
+    transform: rotate(-45deg);
+}
+
+@media (min-width: 480px) {
+    header {
+        font-size: 1rem;
+    }
+
+    main {
+        grid-template-columns: repeat(2, minmax(40vw, 1fr));
+        grid-template-rows: auto;
+    }
+
+    footer {
+        font-size: .7rem;
+    }
+
+    label {
+        font-size: 1.7rem;
+    }
+
+    button {
+        width: 50vw;
+        margin: 0 calc(80vw / 4);
+    }
+
+    div#content {
+        font-size: 2rem;
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        font-size: 2rem;
+    }
+
+    main {
+        grid-template-areas:
+            '. s'
+            '. ns'
+            '. b';
+    }
+
+    main section:first-child {
+        grid-area: s;
+    }
+
+    main section:nth-child(2) {
+        grid-area: ns;
+    }
+
+    main::before {
+        content: '';
+        background: url('./canyon_by_mark-boss.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-column: 0 / 1;
+        grid-row: 1 / -1;
+    }
+
+    button {
+        width: 40vw;
+        margin: 0 auto;
+        grid-area: b;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    div#date {
+        font-size: 3rem;
+    }
+
+    div#temp {
+        font-size: 6rem;
+    }
+
+    div#content {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    label {
+        font-size: 2.5rem;
+        padding-left: 1rem;
+    }
+
+    input {
+        padding: 1rem;
+    }
+
+    textarea {
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 2rem;
+        padding: 2rem 3rem;
+        height: 6rem;
+    }
+}
+
