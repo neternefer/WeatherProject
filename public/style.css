@@ -107,6 +107,7 @@ button {
     flex-direction: column;
     height: 90%;
     margin: 15vh 10vw;
+    width: 80%;
 }
 
 .display span {
