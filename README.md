@@ -1,2 +1,20 @@
 # WeatherProject
- Weather Journal using API
+ Weather Journal implementing OpenWeather API
+
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [TODO](#to-do)
+
+## General info
+Weather Journal created with Node.js, Express and OpenWeather API.
+
+##TODO
+- add error messages for incorrect input
+- include international searches
+- starting point for notebook app
+
+## Screenshots
+Mobile             |  Desktop
+:-------------------------:|:-------------------------:
+![Mobile](.screenshots/screen1.jpg)  |  ![Desktop](./screenshots/screen2.jpg)
