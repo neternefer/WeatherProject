@@ -17,4 +17,4 @@ Weather Journal created with Node.js, Express and OpenWeather API.
 ## Screenshots
 Mobile             |  Desktop
 :-------------------------:|:-------------------------:
-![Mobile](.screenshots/screen1.jpg)  |  ![Desktop](./screenshots/screen2.jpg)
+![Mobile](./screenshots/screen2.png)  |  ![Desktop](./screenshots/screen1.png)
