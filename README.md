@@ -10,7 +10,6 @@
 Weather Journal created with Node.js, Express and OpenWeather API.
 
 ##TODO
-- add error messages for incorrect input
 - include international searches
 - starting point for notebook app
 

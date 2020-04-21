@@ -13,15 +13,19 @@
             <h1>Mood Forecast</h1>
         </header>
         <main>
-            <section class="input-location">
-                <label for="zip">Where <span>are</span> you?</label>
-                <input id="zip" type="text" placeholder="enter zip code here">
-            </section>
-            <section class="input-mood">
-                <label for="feelings">What's your <span>mood</span> today?</label>
-                <textarea id="feelings" placeholder="enter your feelings here" rows="5" cols="30"></textarea>
-            </section>
-            <button id="generate" type="submit">Generate</button>
+            <form class="form">
+                <section class="input-location">
+                    <label for="zip">Where <span>are</span> you?</label>
+                    <input id="zip" type="text" placeholder="enter zip code here"
+                    pattern="^[0-9]*$" required>
+                    <span id="error-msg-zip"></span>
+                </section>
+                <section class="input-mood">
+                    <label for="feelings">What's your <span>mood</span> today?</label>
+                    <textarea id="feelings" placeholder="enter your feelings here" rows="5" cols="30" required></textarea>
+                </section>
+                <button id="generate" type="submit">Generate</button>
+            </form>
         </main>
         <!--Side panel with results-->
         <section class="display">
